@@ -18,6 +18,8 @@ class Globo
   void dibujate()
   {
       ellipse(x,y,80,100);
+      imageMode(CENTER);
+      image(cara,x,y,70,90);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
   }
   
@@ -25,11 +27,13 @@ class Globo
 
 ArrayList<Globo> globos;
 
-
+PImage cara;
 void setup()
 {
   size(640,480);
   globos = new ArrayList<Globo>();  
+  cara = loadImage("1575125831203.jpg");
+  
 }
 
 void draw()
